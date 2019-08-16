@@ -1,0 +1,14 @@
+<select [(ngModel)]="selectedValue">
+  <option *ngFor="let c of output" [ngValue]="c">{{c.name}}</option>
+</select>
+
+<div *ngIf="selectedValue.name == 'Child-to-Parent'">
+  <p> This Data is from my child component ---> {{title}}</p>
+</div>
+
+<div *ngIf="selectedValue.name == 'Parent-to-Child'">
+  <app-navbar  [accountDetails]="account" (outputEvent)="recieve($event)">
+  </app-navbar>
+</div>
+
+

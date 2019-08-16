@@ -1,0 +1,34 @@
+<!---
+    <div class="register-form">
+      <form [formGroup]="heroForm"   (ngSubmit)="onSubmit(heroForm.value)">
+
+        <h2 class="text-center">Create User</h2>
+        <div class="form-group">
+          <input type="text"  formControlName="name" placeholder="Full name">
+        </div>
+      <div>
+        <input value = "submit" class="btn btn-success btn-block" type="submit">
+       </div>
+</form>
+</div>
+-->
+<div class="register-form">
+<form #form="ngForm" (ngSubmit)="logForm(form.value)">
+  <label>Firstname:</label>
+  <input type="text" name="firstname" ngModel>
+
+  <label>Lastname:</label>
+  <input type="text" name="lastname" ngModel>
+
+  <label>Street:</label>
+  <input type="text" name="street" ngModel>
+
+  <label>Zip:</label>
+  <input type="text" name="zip" ngModel>
+
+  <label>City:</label>
+  <input type="text" name="city" ngModel>
+
+  <button type="submit"  class="btn btn-success btn-block">Submit</button>
+</form>
+</div>

@@ -1,0 +1,45 @@
+
+    <div class="register-form">
+		<form [formGroup]="profileForm"    (ngSubmit)="onSubmit()">
+
+			<h2 class="text-center">I seek validation =(</h2>
+			<div class="form-group">
+        <input type="text"  formControlName="name" placeholder="First Name">
+
+
+        <div *ngIf="profileForm.get('name').touched && profileForm.get('name').invalid" class="alert alert-danger ">First Name is required</div>
+
+			</div>
+
+
+			<div class="form-group">
+
+        <input type="text"  classs="form-control" formControlName="surname" placeholder="Last Name">
+        <div *ngIf="profileForm.get('surname').touched && profileForm.get('surname').invalid" class="alert alert-danger ">Surname is required</div>
+       </div>
+
+
+			 <div class="form-group">
+          <input type="email" classs="form-control" formControlName="email" placeholder="email">
+          <div *ngIf="profileForm.get('email').invalid &&  profileForm.get('surname').touched" class="alert alert-danger "> Enter correct email format</div>
+			</div>
+
+
+		<div class="form-group">
+        <input type="text"classs="form-control" formControlName="address" placeholder="address">
+        <div *ngIf="profileForm.get('address').touched && profileForm.get('address').invalid" class="alert alert-danger ">Address is required</div>
+	</div>
+
+		<div class="form-group">
+          <input type="text"classs="form-control" formControlName="phone" placeholder="phone">
+          <div *ngIf="profileForm.get('phone').touched && profileForm.get('phone').invalid" class="alert alert-danger ">Phone is required</div>
+		</div>
+
+		<div class="form-group">
+        <input type="password" classs="form-control" formControlName="password" placeholder="password">
+        <div *ngIf="profileForm.get('password').touched && profileForm.get('password').invalid" class="alert alert-danger ">password is required</div>
+    </div>
+    <div>
+      <input value = "submit" class="btn btn-success btn-block" type="submit">
+     </div>
+  	</form>

@@ -1,0 +1,60 @@
+
+<select [(ngModel)]="selectedValue">
+  <option *ngFor="let c of binding" [ngValue]="c">{{c.name}}</option>
+</select>
+
+
+<div *ngIf="selectedValue.name == 'Property'">
+
+
+  <h2>
+    Property Binding
+</h2>
+<br>
+
+<p>The sum of 1 + 1 is {{1 + 1}}.</p>
+</div>
+
+
+<div *ngIf="selectedValue.name == 'Event'">
+  <h2>
+    Event Binding
+</h2>
+<br>
+  <p>
+    <button (click)="onClickMe()">Say something</button>
+    {{clickMessage}}
+    </p>
+</div>
+
+<div *ngIf="selectedValue.name == 'Two-way'">
+
+  <h2>
+    Two way Binding
+  </h2>
+  <br>
+
+
+  <input type="text" [(ngModel)]="clickMessage">
+
+  {{clickMessage}}
+
+</div>
+<!---<div *ngIf=selectedValue.name == 'Property'></div>
+
+
+
+
+<div *ngIf=selectedValue.name = "Event">
+
+
+
+
+
+<div *ngIf=selectedValue.name = "Two-way">
+
+
+
+
+
+-->
