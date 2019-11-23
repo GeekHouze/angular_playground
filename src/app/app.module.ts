@@ -15,6 +15,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { EventEmitterComponent } from './event-emitter/event-emitter.component';
 import { RegisterComponent } from './register/register.component';
 import { HttpRequestComponent } from './http-request/http-request.component';
+import { RemoveElementDirective } from './remove-element.directive';
 
 @NgModule({
  declarations: [
@@ -28,7 +29,8 @@ import { HttpRequestComponent } from './http-request/http-request.component';
     DataBindingComponent,
     EventEmitterComponent,
     RegisterComponent,
-    HttpRequestComponent
+    HttpRequestComponent,
+    RemoveElementDirective
  ],
   imports: [
     BrowserModule,

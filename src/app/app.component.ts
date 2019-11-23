@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component , Directive, Renderer2, ElementRef, ViewChild ,  OnInit  } from '@angular/core';
 import { Iaccount } from './account.model';
 import { Subscription } from 'rxjs';
 import {MyserviceService } from './myservice.service';
 import {MessageService} from './message.service';
 import {EmailService} from './email.service';
+
 
 @Component({
   selector: 'app-root',
@@ -23,8 +24,11 @@ export class AppComponent {
   mynullvalue : null;
   numericValue : undefined;
   dynamicVAlue : any = "Paseka Moyenki";
+  @ViewChild('myDiv') myDiv: ElementRef;
 
-  constructor(private myserviceService : MyserviceService , private emailService : EmailService){
+  constructor(private myserviceService : MyserviceService ,
+     private emailService : EmailService ,
+       private renderer: Renderer2){
     this.account = {
       acc_no : "1234" ,
       name : "Paseka" ,
@@ -53,11 +57,21 @@ export class AppComponent {
 
     this.emailService.sendToServer("https://reqres.in/api/users");
     this.getNull();
+
+    console.log("on init");
+    this.renderer.setStyle(this.myDiv.nativeElement, 'color', 'blue');
   }
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
 }
+
+ngAfterViewInit(): void {
+  console.log("afterview init");
+  this.renderer.setStyle(this.myDiv.nativeElement, 'color', 'blue');
+}
+
+
 sendchild(){
   this.emailService.obs.next("Hello , this is a message 1");
   this.emailService.obs.next("Hello , this is a message 2");
