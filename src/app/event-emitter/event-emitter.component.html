@@ -1,16 +1,15 @@
 <p>
-
   This section explores event emitters which are a powerful for child and parent componenents to communicate with
   each other below we have two selection boxes which give you options "Child-to-parent" or "Parent-to-Child depending
   on your option the right relevant messsage will be displayed
-
 </p>
+
 <select [(ngModel)]="selectedValue">
   <option *ngFor="let c of output" [ngValue]="c">{{c.name}}</option>
 </select>
 
 
-<div [ngStyle]="{'padding-top': '20px'}">
+<div [ngStyle]="{'padding-top': '20px'}" [ngClass]="">
 <div *ngIf="selectedValue.name == 'Child-to-Parent'">
   <p> This Data is from my child component ---> {{title}}</p>
 </div>

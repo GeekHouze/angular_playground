@@ -20,7 +20,7 @@ import { RemoveElementDirective } from './remove-element.directive';
 @NgModule({
  declarations: [
     AppComponent,
-   NavbarComponent,
+    NavbarComponent,
     BodyComponent,
     HomeComponent,
     HeaderComponent,

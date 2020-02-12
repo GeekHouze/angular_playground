@@ -1,17 +1,3 @@
-<!---
-    <div class="register-form">
-      <form [formGroup]="heroForm"   (ngSubmit)="onSubmit(heroForm.value)">
-
-        <h2 class="text-center">Create User</h2>
-        <div class="form-group">
-          <input type="text"  formControlName="name" placeholder="Full name">
-        </div>
-      <div>
-        <input value = "submit" class="btn btn-success btn-block" type="submit">
-       </div>
-</form>
-</div>
--->
 <div class="register-form">
 <form #form="ngForm" (ngSubmit)="logForm(form.value)">
   <label>Firstname:</label>

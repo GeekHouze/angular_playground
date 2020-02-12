@@ -7,14 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataBindingComponent implements OnInit {
 
-  //messsage = 'No eye has seen , No ears have heard , what God has instore for those who love him';
-
   clickMessage = '';
 
-  binding : any = [
+  bindingType : any = [
   ];
 
-  selectedValue = null;
+  selectedValue = 'way';
 
   onClickMe() {
     this.clickMessage = 'You are my hero!';
@@ -32,7 +30,7 @@ export class DataBindingComponent implements OnInit {
   ngOnInit() {
 
 
- this.binding = [
+ this.bindingType = [
   {id: 1, name: "Two-way"},
   {id: 2, name: "Property"},
   {id: 3, name: "Event"},

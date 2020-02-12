@@ -15,9 +15,8 @@ export class HttpRequestComponent implements OnInit {
 
   }
 
-  ngOnInit() {}
+  ngOnInit() {
 
-}
    /*this.emailService.getFromServer("https://reqres.in/api/users/").subscribe(res=>{
      console.log(res)
      this.users = res;
@@ -26,21 +25,18 @@ export class HttpRequestComponent implements OnInit {
    },err=>{
      console.log(err)
    })
-  //  this.emailService.getFromServer("https://reqres.in/api/users/").subscribe((a)=>{
-  //      alert('fg')
-  //       this.users = a;
-  //       this.dataExists = true;
-  //       console.log(this.users.data,a);
-  // },
-  // ()=>{
+  this.emailService.getFromServer("https://reqres.in/api/users/").subscribe((a)=>{
+      alert('fg')
+       this.users = a;
+      this.dataExists = true;
+       console.log(this.users.data,a);
+ },
+ ()=>{
 
-  // } ,
-  // ()=>{});
-}
+   } ,
+   ()=>{});
 
+  }*/
 
-getRequest(){
-  //return this.emailService.getFromServer("https://reqres.in/api/users")
 }
 }
-*/

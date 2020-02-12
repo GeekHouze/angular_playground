@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
    }
 
 
- 
+
   ngOnInit() {
     this.firstClick();
   }
@@ -104,9 +104,9 @@ export class HomeComponent implements OnInit {
 
   }*/
 
-  firstClick() {
-    this.emailService.firstClick();
-}
+  /*firstClick() {
+    //this.emailService.firstClick();
+}*/
 
 
 }
