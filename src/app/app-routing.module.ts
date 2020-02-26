@@ -27,7 +27,7 @@ const routes : Routes = [
   //{ path: '**', redirectTo: '/services', pathMatch: 'full'},
   {
     path: 'modules',
-    loadChildren: './admin/admin.module#AdminModule'
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
   }
 ];
 

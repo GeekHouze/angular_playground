@@ -24,7 +24,7 @@ export class AppComponent {
   mynullvalue : null;
   numericValue : undefined;
   dynamicVAlue : any = "Paseka Moyenki";
-  @ViewChild('myDiv') myDiv: ElementRef;
+  @ViewChild('myDiv', { static: false }) myDiv: ElementRef;
 
   constructor(private myserviceService : MyserviceService ,
      private emailService : EmailService ,
@@ -55,7 +55,7 @@ export class AppComponent {
     } ,
     ()=>{});*/
 
-    this.emailService.sendToServer("https://reqres.in/api/users");
+    //this.emailService.sendToServer("https://reqres.in/api/users");
     this.getNull();
 
     console.log("on init");
