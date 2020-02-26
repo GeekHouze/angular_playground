@@ -24,7 +24,7 @@ export class AppComponent {
   mynullvalue : null;
   numericValue : undefined;
   dynamicVAlue : any = "Paseka Moyenki";
-  @ViewChild('myDiv', { static: false }) myDiv: ElementRef;
+  @ViewChild('myDiv') myDiv: ElementRef;
 
   constructor(private myserviceService : MyserviceService ,
      private emailService : EmailService ,
