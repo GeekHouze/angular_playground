@@ -137,5 +137,8 @@
       }
     }
   },
-  "defaultProject": "appt"
+  "defaultProject": "appt",
+  "cli": {
+    "analytics": false
+  }
 }

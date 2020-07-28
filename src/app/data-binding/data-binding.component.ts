@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -12,7 +13,7 @@ export class DataBindingComponent implements OnInit {
   bindingType : any = [
   ];
 
-  selectedValue = 'way';
+  selectedValue = null;
 
   onClickMe() {
     this.clickMessage = 'You are my hero!';

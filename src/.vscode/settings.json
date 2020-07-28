@@ -1,0 +1,27 @@
+//Prettier
+/*{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
+}*/
+//JS-CSS-HTML-HTML
+/*{
+  "editor.defaultFormatter": "lonefy.vscode-JS-CSS-HTML-formatter",
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "lonefy.vscode-JS-CSS-HTML-formatter"
+  }
+}*/
+//Angular
+{
+  "editor.defaultFormatter": "stringham.angular-template-formatter",
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "lonefy.vscode-JS-CSS-HTML-formatter"
+  }
+}

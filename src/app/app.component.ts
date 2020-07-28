@@ -59,7 +59,7 @@ export class AppComponent {
     this.getNull();
 
     console.log("on init");
-    this.renderer.setStyle(this.myDiv.nativeElement, 'color', 'blue');
+    //this.renderer.setStyle(this.myDiv.nativeElement, 'color', 'blue');
   }
 
   ngOnDestroy() {
