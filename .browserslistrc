@@ -4,8 +4,8 @@
 #
 # For IE 9-11 support, please remove 'not' from the last line of the file and adjust as needed
 
-> 0.5%
-last 2 versions
-Firefox ESR
+> .5% in ZA    # I want to support browser versions that have more than 5% of global usage
+last 3 versions
+#Firefox ESR
+IE 9-11
 not dead
-not IE 9-11
