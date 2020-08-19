@@ -16,6 +16,7 @@ import { EventEmitterComponent } from './event-emitter/event-emitter.component';
 import { RegisterComponent } from './register/register.component';
 import { HttpRequestComponent } from './http-request/http-request.component';
 import { RemoveElementDirective } from './remove-element.directive';
+import {  CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @NgModule({
  declarations: [
@@ -40,6 +41,9 @@ import { RemoveElementDirective } from './remove-element.directive';
     HttpClientModule,
   ],
   providers: [],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

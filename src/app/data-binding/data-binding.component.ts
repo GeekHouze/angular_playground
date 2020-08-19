@@ -1,5 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-data-binding',
@@ -15,6 +16,28 @@ export class DataBindingComponent implements OnInit {
 
   selectedValue = null;
 
+
+  constructor(private spinner: NgxSpinnerService) { }
+
+
+  ngOnInit() {
+                this.bindingType = [
+                {id: 1, name: "Two-way"},
+                {id: 2, name: "Property"},
+                {id: 3, name: "Event"},
+              ];
+
+
+              //setting spinner to be visible
+              this.spinner.show();
+
+              setTimeout(() => {
+                /** spinner ends after 5 seconds */
+                this.spinner.hide();
+              }, 5000);
+     }
+
+
   onClickMe() {
     this.clickMessage = 'You are my hero!';
   }
@@ -25,16 +48,4 @@ export class DataBindingComponent implements OnInit {
     this.clickMessage  = "No eye has seen , No ears have heard , what God has instore for those who love him";
   }
 
-
-  constructor() { }
-
-  ngOnInit() {
-
-
- this.bindingType = [
-  {id: 1, name: "Two-way"},
-  {id: 2, name: "Property"},
-  {id: 3, name: "Event"},
-];
-  }
 }
